@@ -34,5 +34,17 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'keycloak' => [
+        'client_id'     => env('KEYCLOAK_CLIENT_ID'),
+        'client_secret' => env('KEYCLOAK_CLIENT_SECRET'),
+        'redirect'      => env('KEYCLOAK_REDIRECT_URI'),
+
+        // kunci yang digunakan driver
+        'base_url'      => env('KEYCLOAK_BASE_URL'),
+        'host'          => env('KEYCLOAK_BASE_URL'), // alias aman
+        'realms'         => env('KEYCLOAK_REALM'),
+
+        'scope'         => ['openid', 'profile', 'email'],
+    ],
 
 ];
